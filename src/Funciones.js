@@ -20,19 +20,19 @@ function devolverImpuestoPorEstado(estado)
     {
         return 6.65;
     }
-    else if(estado=="NV")
+    if(estado=="NV")
     {
         return 8.00;
     }
-    else if(estado=="TX")
+     if(estado=="TX")
     {
         return 6.25;
     }
-   else if(estado=="AL")
+    if(estado=="AL")
     {
         return 4;
     }
-    else if(estado=="CA")
+     if(estado=="CA")
     {
         return 8.25;
     }

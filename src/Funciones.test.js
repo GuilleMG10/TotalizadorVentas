@@ -19,9 +19,18 @@ describe("Funciones", () => {
       it("deberia devolver el impuesto total segun el estado", () => {
         expect(calcularImpuesto("TX",20,3)).toEqual(3.75);
       });
+      it("deberia devolver el impuesto total segun el estado", () => {
+        expect(devolverImpuestoPorEstado("NV")).toEqual(8.00);
+      });
+      it("deberia devolver el impuesto total segun el estado", () => {
+        expect(devolverImpuestoPorEstado("UT")).toEqual(6.65);
+      });
+      it("deberia devolver el impuesto total segun el estado", () => {
+        expect(devolverImpuestoPorEstado("AL")).toEqual(4.0);
+      });
+      
       
      
       
-
 
   });

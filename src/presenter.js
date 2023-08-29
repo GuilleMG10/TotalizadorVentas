@@ -1,4 +1,4 @@
-import { devolverPrecioDeUnItem } from "./Funciones";
+import { calcularImpuesto,devolverImpuestoPorEstado ,devolverPrecioDeUnItem } from "./Funciones";
 import { devolverCantidad } from "./Funciones";
 import { devolverEstado } from "./Funciones";
 import { devolverPrecioNeto } from "./Funciones";
@@ -6,7 +6,7 @@ import { devolverPrecioNeto } from "./Funciones";
 const Fprecio = document.querySelector("#precio-item");
 const Fcantidad = document.querySelector("#cantidad-item");
 const Festado = document.querySelector("#estados");
-const form = document.querySelector("#sumar-form");
+const form = document.querySelector("#total-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
@@ -20,7 +20,9 @@ form.addEventListener("submit", (event) => {
   div.innerHTML = "<p>" + devolverPrecioDeUnItem(precio) + "</p>";
   div.innerHTML += "<p>" + "Cantidad de ítems: " + devolverCantidad(cantidad) + "</p>";
   div.innerHTML += "<p>" + "Código de estado: " + devolverEstado(estado) + "</p>";
-  div.innerHTML += "<p>" + "Precio Neto" + devolverPrecioNeto(precio,cantidad) + "</p>";
+  div.innerHTML += "<p>" + "Precio Neto:" + devolverPrecioNeto(precio,cantidad)+"$" + "</p>";
+  div.innerHTML += "<p>" + "Impuesto para " + devolverEstado(estado) +"( " + devolverImpuestoPorEstado(estado)+") :"+calcularImpuesto(estado,precio,cantidad) +"$"+"</p>";
   
 
 });
+ 
