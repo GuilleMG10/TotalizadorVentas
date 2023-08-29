@@ -3,6 +3,7 @@ import { devolverCantidad } from "./Funciones";
 import { devolverEstado } from "./Funciones";
 import { devolverPrecioNeto } from "./Funciones";
 import { devolverDescuento } from "./Funciones";
+import { devolverPrecioTotal } from "./Funciones";
 
 const Fprecio = document.querySelector("#precio-item");
 const Fcantidad = document.querySelector("#cantidad-item");
@@ -24,6 +25,7 @@ form.addEventListener("submit", (event) => {
   div.innerHTML += "<p>" + "Precio Neto:" + devolverPrecioNeto(precio,cantidad)+"$" + "</p>";
   div.innerHTML += "<p>" + "Impuesto para " + devolverEstado(estado) +"( " + devolverImpuestoPorEstado(estado)+") :"+calcularImpuesto(estado,precio,cantidad) +"$"+"</p>";
   div.innerHTML += "<p>" + "Descuento aplicado: " + devolverDescuento(precio,cantidad)+" $" +"</p>";
+  div.innerHTML += "<p>" + "Precio Total(descuento e impuesto): " + devolverPrecioTotal(precio,cantidad,estado)+" $" +"</p>";
 
 });
  

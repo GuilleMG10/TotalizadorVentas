@@ -74,4 +74,9 @@ function devolverDescuento(precio,cantidad)
     return 0;
    }
 }
-export {devolverPrecioDeUnItem,devolverCantidad,devolverEstado,devolverPrecioNeto,devolverImpuestoPorEstado,calcularImpuesto,devolverDescuento};
+function devolverPrecioTotal(precio,cantidad , estado)
+{
+    return devolverPrecioNeto(precio,cantidad)-devolverDescuento(precio,cantidad)+calcularImpuesto(estado,precio,cantidad);
+
+}
+export {devolverPrecioDeUnItem,devolverCantidad,devolverEstado,devolverPrecioNeto,devolverImpuestoPorEstado,calcularImpuesto,devolverDescuento,devolverPrecioTotal};

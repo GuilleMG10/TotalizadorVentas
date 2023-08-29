@@ -1,4 +1,4 @@
-import { devolverPrecioDeUnItem , devolverPrecioNeto,devolverEstado,devolverCantidad,devolverImpuestoPorEstado,calcularImpuesto, devolverDescuento} from "./Funciones";
+import { devolverPrecioDeUnItem , devolverPrecioNeto,devolverEstado,devolverCantidad,devolverImpuestoPorEstado,calcularImpuesto, devolverDescuento,devolverPrecioTotal} from "./Funciones";
 
 describe("Funciones", () => {
     it("deberia devolver el precio de un item", () => {
@@ -34,14 +34,17 @@ describe("Funciones", () => {
       it("deberia devolver el descuento de 3000", () => {
         expect(devolverDescuento(3000,1)).toEqual(3000*0.05);
       });
-      it("deberia devolver el descuento de 1000", () => {
+      it("deberia devolver el descuento de 7000", () => {
         expect(devolverDescuento(7000,1)).toEqual(7000*0.07);
       });
-      it("deberia devolver el descuento de 1000", () => {
+      it("deberia devolver el descuento de 10000", () => {
         expect(devolverDescuento(10000,1)).toEqual(10000*0.10);
       });
-      it("deberia devolver el descuento de 1000", () => {
+      it("deberia devolver el descuento de 30000", () => {
         expect(devolverDescuento(30000,1)).toEqual(30000*0.15);
+      });
+      it("deberia devolver precio total", () => {
+        expect(devolverPrecioTotal(30,2,"TX")).toEqual(63.75);
       });
   
       
