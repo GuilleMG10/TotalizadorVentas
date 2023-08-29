@@ -10,4 +10,8 @@ function devolverEstado(estado)
 {
     return estado;
 }
-export {devolverPrecioDeUnItem,devolverCantidad,devolverEstado};
+function devolverPrecioNeto(precio,cantidad)
+{
+    return precio*cantidad;
+}
+export {devolverPrecioDeUnItem,devolverCantidad,devolverEstado,devolverPrecioNeto};

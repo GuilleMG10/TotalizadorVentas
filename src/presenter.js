@@ -1,6 +1,7 @@
 import { devolverPrecioDeUnItem } from "./Funciones";
 import { devolverCantidad } from "./Funciones";
 import { devolverEstado } from "./Funciones";
+import { devolverPrecioNeto } from "./Funciones";
 
 const Fprecio = document.querySelector("#precio-item");
 const Fcantidad = document.querySelector("#cantidad-item");
@@ -19,5 +20,7 @@ form.addEventListener("submit", (event) => {
   div.innerHTML = "<p>" + devolverPrecioDeUnItem(precio) + "</p>";
   div.innerHTML += "<p>" + "Cantidad de ítems: " + devolverCantidad(cantidad) + "</p>";
   div.innerHTML += "<p>" + "Código de estado: " + devolverEstado(estado) + "</p>";
+  div.innerHTML += "<p>" + "Precio Neto" + devolverPrecioNeto(precio,cantidad) + "</p>";
+  
 
 });

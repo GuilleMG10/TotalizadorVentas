@@ -1,4 +1,4 @@
-import { devolverPrecioDeUnItem , devolverEstado,devolverCantidad} from "./Funciones";
+import { devolverPrecioDeUnItem , devolverPrecioNeto,devolverEstado,devolverCantidad} from "./Funciones";
 
 describe("Funciones", () => {
     it("deberia devolver el precio de un item", () => {
@@ -10,4 +10,8 @@ describe("Funciones", () => {
       it("deberia devolver el estado seleccionado", () => {
         expect(devolverEstado("CA")).toEqual("CA");
       });
+      it("deberia devolver el precio neto", () => {
+        expect(devolverPrecioNeto(3,2)).toEqual(6);
+      });
+
   });
