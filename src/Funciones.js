@@ -38,10 +38,9 @@ function devolverImpuestoPorEstado(estado)
     }
 }
 function calcularImpuesto(estado,precio,cantidad)
-{
-    impuesto=devolverImpuesto(estado);
-    tot=devolverTotal(precio,cantidad);
-    resul=tot*(impuesto/100);
-    return resul;
+{ 
+  
+    return devolverPrecioNeto(precio,cantidad)*(devolverImpuestoPorEstado(estado)/100);
+    
 }
 export {devolverPrecioDeUnItem,devolverCantidad,devolverEstado,devolverPrecioNeto,devolverImpuestoPorEstado,calcularImpuesto};
