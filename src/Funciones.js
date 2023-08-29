@@ -6,4 +6,8 @@ function devolverCantidad(cantidad)
 {
     return cantidad;
 }
-export {devolverPrecioDeUnItem,devolverCantidad};
+function devolverEstado(estado)
+{
+    return estado;
+}
+export {devolverPrecioDeUnItem,devolverCantidad,devolverEstado};
