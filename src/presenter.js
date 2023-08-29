@@ -1,15 +1,14 @@
-import sumar from "./sumador";
+import { devolverPrecio } from "./Funciones";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
+const Fprecio = document.querySelector("#precio-item");
+
 const form = document.querySelector("#sumar-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const precio = Number.parseInt(Fprecio.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + devolverPrecio(precio) + "</p>";
 });
