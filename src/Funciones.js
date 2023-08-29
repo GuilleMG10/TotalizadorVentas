@@ -2,5 +2,8 @@ function devolverPrecioDeUnItem(precio)
 {
     return precio;
 }
-
-export {devolverPrecioDeUnItem};
+function devolverCantidad(cantidad)
+{
+    return cantidad;
+}
+export {devolverPrecioDeUnItem,devolverCantidad};
